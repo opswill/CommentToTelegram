@@ -1,8 +1,8 @@
 # CommentToTelegram
-一个typecho插件，将评论推送到Telegram Bot。
+一个typecho插件，将评论推送到Telegram Bot
 
 ## 功能及特性
-- 支持Telegram Inline Button管理评论状态
+- 支持Telegram Inline Button管理评论状态，可以通过Telegram管理评论：支持 批准/删除/标记垃圾
 - 支持在Telegram通知上回复评论
 - 支持配置代理
 - 支持异步回调
