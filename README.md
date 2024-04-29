@@ -1,35 +1,36 @@
 # CommentToTelegram
-一个typecho插件，将评论推送到Telegram Bot
+
+一个全新的 typecho 插件，使用 Telegram API 将评论推送到 Telegram Bot 通知并管理 
 
 ## 功能及特性
-- 支持Telegram Inline Button管理评论状态，可以通过Telegram管理评论：支持将评论 批准/删除/标记垃圾
+- 支持 Telegram Inline Button 管理评论状态，可以通过 Telegram 管理评论：支持将评论 批准/删除/标记垃圾
 - 支持在Telegram通知上回复评论，在评论通知上点击回复，回复的内容会同步到博客，无需登录博客
-- 支持配置代理，支持使用socks5、https、http代理访问telegram
+- 支持配置代理，支持使用 socks5、https、http 代理访问 Telegram
 - 支持异步回调，不会阻塞评论
 
 ## 插件版本要求
-1. 建议typecho版本大于 1.2.1，其他版本未进行测试
-2. php: >=8.1.0, 本插件依赖 php-curl 和php-json
-3. 如果使用代理功能，建议使用新版本的php-curl扩展
+1. 建议 Typecho 版本大于 1.2.1，其他版本未进行测试
+2. php: >=8.1.0, 本插件依赖 php-curl 和 php-json
+3. 如果使用代理功能，建议使用新版本的 php-curl 扩展
 
 ## 安装教程
 
 1. 下载后将压缩包解压到 /usr/plugins 目录
-2. 文件夹名改为CommentToTelegram
+2. 文件夹名改为 CommentToTelegram
 3. 登录管理后台，激活插件
-4. 配置插件 填写Telegram Bot Token及Telegram Chat ID，并设置其他参数
+4. 配置插件 填写 Telegram Bot Token 及 Telegram Chat ID，并设置其他参数
 5. 保存配置，并注意是否有错误信息
 
 ## 插件升级
 
 1. 禁用旧版本插件
-2. 删除旧版本的文件，并上传然后传新版本解压，文件夹名改为CommentToTelegram
+2. 删除旧版本的文件，并上传然后传新版本解压，文件夹名改为 CommentToTelegram
 3. 激活插件并设置参数
 
 ## 使用教程
 ### 一、 使用前提：
-1. 申请Telegram bot Token： [官方教程](https://core.telegram.org/bots/tutorial)
-2. 通过Telegam bot api获取 chat_id: [getUpdates API](https://core.telegram.org/bots/api#getupdates)
+1. 申请 Telegram bot Token： [官方教程](https://core.telegram.org/bots/tutorial)
+2. 通过 Telegam bot api 获取 chat_id: [getUpdates API](https://core.telegram.org/bots/api#getupdates)
 如果看不懂，请自行百度谷歌相关教程
 ###
 ### 二、可配置选项
