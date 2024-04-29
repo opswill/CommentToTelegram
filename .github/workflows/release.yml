@@ -60,7 +60,6 @@ jobs:
         id: zip-plugin
         run: |
           sed -i "s/%version%/${{ steps.extract-version.outputs.version }}/g" ./CommentToTelegram/Plugin.php
-          cp -r CommentToTelegram ${{ steps.plugin-name.outputs.plugin_name }}
           zip -r ${{ steps.plugin-name.outputs.plugin_name }}-${{ steps.extract-version.outputs.version }}.zip ${{ steps.plugin-name.outputs.plugin_name }}
           echo plugin_zip=${{ steps.plugin-name.outputs.plugin_name }}-${{ steps.extract-version.outputs.version }}.zip >> $GITHUB_OUTPUT
 
