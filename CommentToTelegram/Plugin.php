@@ -20,7 +20,7 @@ require_once __DIR__ . '/Telegram.php';
  *
  * @package CommentToTelegram
  * @author opswill
- * @version 2.3.0
+ * @version 1.0.0
  * @since 1.2.1
  * @link https://opswill.com
  *
