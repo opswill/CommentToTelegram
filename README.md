@@ -1,6 +1,8 @@
 # CommentToTelegram
 
-一个全新的 typecho 插件，使用 Telegram API 将评论推送到 Telegram Bot 通知并管理 
+一个全新的 typecho 插件，使用 Telegram API 将评论推送到 Telegram Bot 通知并管理
+
+围观地址： [详细介绍](https://opswill.com/articles/my-typecho-plugin-CommentToTelegram.html) 
 
 ## 功能及特性
 - 支持 Telegram Inline Button 管理评论状态，可以通过 Telegram 管理评论：支持将评论 批准/删除/标记垃圾
@@ -71,7 +73,7 @@ typecho 博客上的评论状态：
 
 建议使用typecho前台通过主题的评论框进行回复，本插件回复虽然使用typecho内置接口，但被回复的访客无法收到评论提醒（如邮件提醒），怀疑是typecho的bug，目前无法解决。
 
-更多问题可以通过 issue 页面提交，或者通过 博客、邮件向我反馈
+更多问题可以通过 issue 页面提交，或者通过  [博客](https://opswill.com)、邮件向我反馈
 
 # 感谢
 - https://github.com/joyqi/typecho-plugin-sitemap
