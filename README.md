@@ -53,7 +53,8 @@
 #### 3.2 评论回复
 如果不启用 Telegram Inline Button管理评论，也无法启用回复功能。使用回复功能需要先设置正确的typecho后台的用户uid，查看uid：
 
-<img width="405" alt="后台用户uid" src="https://github.com/opswill/CommentToTelegram/assets/7550211/162b7e11-8266-4abf-9635-06565349ce7f">
+<img width="395" alt="后台用户uid" src="https://github.com/opswill/CommentToTelegram/assets/7550211/361790e0-9b8c-4fcd-b6e7-5ef25766d495">
+
 
 在Telegam的通知上进行评论回复：
 
