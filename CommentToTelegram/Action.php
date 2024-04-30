@@ -107,14 +107,14 @@ class  CommentToTelegram_Action extends  Typecho_Widget implements Widget_Interf
 
         });
 
-        if ($action !== 'reply') {
-            self::sendTelegramRequest($apiToken, $dataSendMessage, 'editMessageText', $proxy);
-        } else {
+        if ($action == 'reply') {
             $dataSendMessage = [
                 'chat_id' => $chatId,
                 'text' => '回复评论ID：' . $coid .' 已成功!'
             ];
             self::sendTelegramRequest($apiToken, $dataSendMessage, 'sendMessage',$proxy);
+        } else {
+            self::sendTelegramRequest($apiToken, $dataSendMessage, 'editMessageText', $proxy);
         }
         echo json_encode(['status' => 'success']);
     }
