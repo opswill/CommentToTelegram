@@ -1,6 +1,6 @@
 # CommentToTelegram
 
-一个全新的 typecho 插件，使用 Telegram API 将评论推送到 Telegram Bot 通知并管理
+一个全新的 typecho 插件，使用 Telegram API 将评论推送到 Telegram Bot 通知并管理评论状态 
 
 围观地址： [详细介绍](https://opswill.com/articles/my-typecho-plugin-CommentToTelegram.html) 
 
@@ -21,7 +21,7 @@
 2. 文件夹名改为 CommentToTelegram
 3. 登录管理后台，激活插件
 4. 配置插件 填写 Telegram Bot Token 及 Telegram Chat ID，并设置其他参数
-5. 保存配置，并注意是否有错误信息
+5. 保存配置，并注意是否有错误提示
 
 ## 插件升级
 
@@ -33,12 +33,13 @@
 ### 一、 使用前提：
 1. 申请 Telegram bot Token： [官方教程](https://core.telegram.org/bots/tutorial)
 2. 通过 Telegam bot api 获取 chat_id: [getUpdates API](https://core.telegram.org/bots/api#getupdates)
+
 如果看不懂，请自行百度谷歌相关教程
 
 ### 二、可配置选项
 <img width="948" alt="后台可配置选项" src="https://github.com/opswill/CommentToTelegram/assets/7550211/4a4f2693-763d-4b90-be02-c8c4a96b8174">
 
-如果插件配置有错误，会在点击 **保存设置** 后提示错误信息。如网络错误、代理信息错误、用户uid错误等等
+如果插件配置有错误，点击 **保存设置** 后会提示错误信息。如网络错误、代理信息错误、用户uid错误等等
 
 ### 三、通知详情及评论管理按钮
 
@@ -46,12 +47,13 @@
 
 <img width="349" alt="评论通知" src="https://github.com/opswill/CommentToTelegram/assets/7550211/99a6f831-4145-4398-833c-9d10a99f1416">
 
-每条评论只能管理一次，在点击管理按钮后，通知下方的管理按钮会消失并提示通知状态：
+每条评论只能管理一次，在点击管理按钮后，通知下方的管理按钮会消失并提示评论处理结果：
 
 <img width="336" alt="评论管理" src="https://github.com/opswill/CommentToTelegram/assets/7550211/ba680e8f-0ec2-4b56-b41d-478a21a76f9d">
 
 #### 3.2 评论回复
-如果不启用 Telegram Inline Button管理评论，也无法启用回复功能。使用回复功能需要先设置正确的typecho后台的用户uid，查看uid：
+
+启用 Telegram Inline Button管理评论后，即可以使用回复功能。需要先设置 Typecho 真实的用户 uid，查看 uid：
 
 <img width="395" alt="后台用户uid" src="https://github.com/opswill/CommentToTelegram/assets/7550211/361790e0-9b8c-4fcd-b6e7-5ef25766d495">
 
@@ -72,7 +74,7 @@ typecho 博客上的评论状态：
 
 1. 建议将所有评论设置为先需要审核（后台->设置->评论->评论提交->所有评论必须经过审核），然后通过本插件进行管理。
 
-2. 建议使用typecho前台通过主题的评论框进行回复，本插件回复虽然使用typecho内置接口，但被回复的访客无法收到评论提醒（如邮件提醒），怀疑是 Typecho 的 bug，目前无法解决。
+2. 建议使用typecho前台通过主题的评论框进行回复，本插件回复虽然使用typecho内置接口，但被回复的访客无法收到评论提醒（如邮件提醒），怀疑是 Typecho 的 bug，已经提了一个 issue 询问，目前暂时无法解决。
 
 更多问题可以通过 issue 页面提交，或者通过  [博客](https://opswill.com)、邮件向我反馈
 
