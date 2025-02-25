@@ -20,7 +20,7 @@ require_once __DIR__ . '/Telegram.php';
  *
  * @package CommentToTelegram
  * @author opswill
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.2.1
  * @link https://opswill.com
  *
@@ -119,14 +119,14 @@ class Plugin implements PluginInterface
         $inlineKeyboard = [
             'inline_keyboard' => [
                 [
-                    ['text' => '打开评论', 'url' => $comment->permalink ],
+                    ['text' => '👀 打开评论', 'url' => $comment->permalink ],
                 ],
                 [
-                    ['text' => '通过评论', 'callback_data' => json_encode(['action' => 'approved', 'coid' => $commentId, 'key' => $key ])],
-                    ['text' => '标记垃圾', 'callback_data' => json_encode(['action' => 'spam', 'coid' => $commentId, 'key' => $key ])]
+                    ['text' => '✅ 通过评论', 'callback_data' => json_encode(['action' => 'approved', 'coid' => $commentId, 'key' => $key ])],
+                    ['text' => '🚫 标记垃圾', 'callback_data' => json_encode(['action' => 'spam', 'coid' => $commentId, 'key' => $key ])]
                 ],
                 [
-                ['text' => '删除评论', 'callback_data' => json_encode(['action' => 'delete', 'coid' => $commentId , 'key' => $key ])]
+                ['text' => '🗑️ 删除评论', 'callback_data' => json_encode(['action' => 'delete', 'coid' => $commentId , 'key' => $key ])]
                 ]
             ]   
         ];

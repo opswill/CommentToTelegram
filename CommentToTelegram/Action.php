@@ -57,7 +57,7 @@ class  CommentToTelegram_Action extends  Typecho_Widget implements Widget_Interf
             if($comment->status !== 'approved') {
                 $dataSendMessage = [
                     'chat_id' => $chatId,
-                    'text' => '评论不支持回复,请先通过评论或检查评论状态！'.PHP_EOL.'被回复的评论ID：' . $coid . ' 当前状态: ' . $commentStatus
+                    'text' => '⚠️ 评论不支持回复,请先通过评论或检查评论状态！'.PHP_EOL.'被回复的评论ID：' . $coid . ' 当前状态: ' . $commentStatus
                 ];
                 self::sendTelegramRequest($apiToken, $dataSendMessage, 'sendMessage',$proxy);
                 return;
@@ -70,7 +70,7 @@ class  CommentToTelegram_Action extends  Typecho_Widget implements Widget_Interf
             $receivedKey = $callbackData['key'];
 
             $messageId = $callbackRaw['callback_query']['message']['message_id'];
-            $messageText = $callbackRaw['callback_query']['message']['text'].PHP_EOL.'评论已经处理: '.$action;
+            $messageText = $callbackRaw['callback_query']['message']['text'].PHP_EOL.'✅ 评论已经处理: '.$action;
 
             $key =  substr(md5($apiToken), 0, 8);
             if ($receivedKey !== $key) {
@@ -110,7 +110,7 @@ class  CommentToTelegram_Action extends  Typecho_Widget implements Widget_Interf
         if ($action == 'reply') {
             $dataSendMessage = [
                 'chat_id' => $chatId,
-                'text' => '回复评论ID：' . $coid .' 已成功!'
+                'text' => '✅ 回复评论ID：' . $coid .' 已成功!'
             ];
             self::sendTelegramRequest($apiToken, $dataSendMessage, 'sendMessage',$proxy);
         } else {

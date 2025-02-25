@@ -5,10 +5,10 @@
 围观地址： [详细介绍](https://opswill.com/articles/my-typecho-plugin-CommentToTelegram.html) 
 
 ## 功能及特性
-- 支持 Telegram Inline Button 管理评论状态，可以将评论 批准/删除/标记垃圾
-- 支持在 Telegram 通知上回复评论，在评论通知上点击回复，回复的内容会同步到博客，无需登录博客
-- 支持配置代理，支持使用 socks5、https、http 代理访问 Telegram
-- 支持异步回调，不会阻塞评论
+- 支持通过 Telegram Inline Button 管理评论状态，可以将评论 批准/删除/标记垃圾
+- 支持在 Telegram 通知上回复评论，回复的内容会同步到博客，无需登录博客
+- 支持配置代理，可以通过 socks5、https、http 代理访问 Telegram
+- 使用异步回调，不会阻塞评论
 
 ## 插件版本要求
 1. 建议 Typecho 版本大于 1.2.1，其他版本未进行测试
@@ -74,7 +74,7 @@ typecho 博客上的评论状态：
 
 1. 建议将所有评论设置为先需要审核（后台->设置->评论->评论提交->所有评论必须经过审核），然后通过本插件进行管理。
 
-2. 建议使用typecho前台通过主题的评论框进行回复，本插件回复虽然使用typecho内置接口，但被回复的访客无法收到评论提醒（如邮件提醒），怀疑是 Typecho 的 bug，已经提了一个 issue 询问，目前暂时无法解决。
+2. 建议使用typecho前台通过主题的评论框进行回复，本插件回复虽然使用typecho内置接口，但被回复的访客无法收到评论提醒（如邮件提醒），怀疑是 Typecho 的 bug，已经提了一个 [issue](https://github.com/typecho/typecho/issues/1764) 询问，目前暂时无法解决。
 
 更多问题可以通过 issue 页面提交，或者通过  [博客](https://opswill.com)、邮件向我反馈
 
